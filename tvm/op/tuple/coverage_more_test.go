@@ -4,10 +4,10 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	"github.com/xssnick/tonutils-go/tvm/op/helpers"
-	tuplepkg "github.com/xssnick/tonutils-go/tvm/tuple"
-	"github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/op/helpers"
+	tuplepkg "github.com/tosnetwork/tosutils-go/tvm/tuple"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 func mustPushTupleValue(t *testing.T, state *vm.State, vals ...any) {

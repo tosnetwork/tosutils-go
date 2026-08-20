@@ -4,7 +4,7 @@ package tlb
 
 import (
 	"fmt"
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 	"math/big"
 	"reflect"
 	"strconv"

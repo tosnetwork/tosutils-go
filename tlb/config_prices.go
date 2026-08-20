@@ -4,7 +4,7 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 type ConfigStoragePrices struct {

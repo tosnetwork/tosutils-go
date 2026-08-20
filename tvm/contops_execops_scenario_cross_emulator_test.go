@@ -9,14 +9,14 @@ import (
 	"os"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	execop "github.com/xssnick/tonutils-go/tvm/op/exec"
-	mathop "github.com/xssnick/tonutils-go/tvm/op/math"
-	stackop "github.com/xssnick/tonutils-go/tvm/op/stack"
-	tupleop "github.com/xssnick/tonutils-go/tvm/op/tuple"
-	"github.com/xssnick/tonutils-go/tvm/tuple"
-	"github.com/xssnick/tonutils-go/tvm/vm"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	execop "github.com/tosnetwork/tosutils-go/tvm/op/exec"
+	mathop "github.com/tosnetwork/tosutils-go/tvm/op/math"
+	stackop "github.com/tosnetwork/tosutils-go/tvm/op/stack"
+	tupleop "github.com/tosnetwork/tosutils-go/tvm/op/tuple"
+	"github.com/tosnetwork/tosutils-go/tvm/tuple"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func TestTVMCrossEmulatorContExecScenarios(t *testing.T) {

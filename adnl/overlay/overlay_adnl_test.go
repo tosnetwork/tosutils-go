@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xssnick/tonutils-go/adnl/keys"
-	"github.com/xssnick/tonutils-go/adnl/rldp"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/adnl/keys"
+	"github.com/tosnetwork/tosutils-go/adnl/rldp"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 func signedBroadcastFEC(t *testing.T, priv ed25519.PrivateKey, fec any, data []byte, dataSize uint32, flags int32) *BroadcastFEC {

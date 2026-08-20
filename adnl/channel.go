@@ -7,8 +7,8 @@ import (
 	"crypto/rand"
 	"crypto/sha256"
 	"errors"
-	"github.com/xssnick/tonutils-go/adnl/keys"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/adnl/keys"
+	"github.com/tosnetwork/tosutils-go/tl"
 	"math/big"
 	"sync/atomic"
 )

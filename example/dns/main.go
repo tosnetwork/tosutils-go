@@ -3,12 +3,12 @@ package main
 import (
 	"context"
 	"encoding/hex"
-	"github.com/xssnick/tonutils-go/ton/dns"
+	"github.com/tosnetwork/tosutils-go/ton/dns"
 	"log"
 	"time"
 
-	"github.com/xssnick/tonutils-go/liteclient"
-	"github.com/xssnick/tonutils-go/ton"
+	"github.com/tosnetwork/tosutils-go/liteclient"
+	"github.com/tosnetwork/tosutils-go/ton"
 )
 
 func main() {

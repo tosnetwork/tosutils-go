@@ -4,9 +4,9 @@ import (
 	"errors"
 	"time"
 
-	"github.com/xssnick/tonutils-go/address"
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	"github.com/xssnick/tonutils-go/tvm/tuple"
+	"github.com/tosnetwork/tosutils-go/address"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/tuple"
 )
 
 // BlockOptions carries the per-block execution inputs that cannot be derived

@@ -7,10 +7,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	funcsop "github.com/xssnick/tonutils-go/tvm/op/funcs"
-	"github.com/xssnick/tonutils-go/tvm/tuple"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	funcsop "github.com/tosnetwork/tosutils-go/tvm/op/funcs"
+	"github.com/tosnetwork/tosutils-go/tvm/tuple"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 // TestTVMCrossEmulatorBLSOffSubgroupParity pins down, against the real reference

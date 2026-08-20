@@ -10,7 +10,7 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/xssnick/tonutils-go/ton/wallet/hdwallet"
+	"github.com/tosnetwork/tosutils-go/ton/wallet/hdwallet"
 
 	"golang.org/x/crypto/pbkdf2"
 )

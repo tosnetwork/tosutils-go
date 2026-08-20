@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xssnick/tonutils-go/adnl/keys"
-	"github.com/xssnick/tonutils-go/adnl/rldp"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/adnl/keys"
+	"github.com/tosnetwork/tosutils-go/adnl/rldp"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 func keyPairFromSeed(seedByte byte) (ed25519.PublicKey, ed25519.PrivateKey) {

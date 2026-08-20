@@ -1,7 +1,7 @@
 package math
 
 import (
-	"github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 func init() {

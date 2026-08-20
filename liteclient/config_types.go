@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/xssnick/tonutils-go/adnl/address"
+	"github.com/tosnetwork/tosutils-go/adnl/address"
 )
 
 type GlobalConfig struct {

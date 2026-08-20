@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/xssnick/tonutils-go/adnl/keys"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/adnl/keys"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 func broadcastSourceID(source any, flags int32) ([]byte, error) {

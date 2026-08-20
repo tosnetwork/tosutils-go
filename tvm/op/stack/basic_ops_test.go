@@ -3,7 +3,7 @@ package stack
 import (
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 func TestSWAP(t *testing.T) {

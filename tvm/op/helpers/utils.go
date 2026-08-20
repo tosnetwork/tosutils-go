@@ -1,7 +1,7 @@
 package helpers
 
 import (
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 func Builder(b []byte) *cell.Builder {

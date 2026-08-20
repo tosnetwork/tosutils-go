@@ -3,7 +3,7 @@ package tvm
 import (
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 // transactionCellStatsReference is the pre-memoization walker: it re-walks

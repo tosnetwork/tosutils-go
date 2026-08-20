@@ -1,8 +1,8 @@
 package vm
 
 import (
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func (s *State) SetLibraries(libs ...*cell.Cell) {

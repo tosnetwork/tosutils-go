@@ -1,6 +1,6 @@
 package vm
 
-import "github.com/xssnick/tonutils-go/tvm/vmerr"
+import "github.com/tosnetwork/tosutils-go/tvm/vmerr"
 
 // Gas prices constants.
 const (

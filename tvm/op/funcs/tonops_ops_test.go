@@ -10,10 +10,10 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	localec "github.com/xssnick/tonutils-go/tvm/internal/secp256k1"
-	"github.com/xssnick/tonutils-go/tvm/tuple"
-	"github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	localec "github.com/tosnetwork/tosutils-go/tvm/internal/secp256k1"
+	"github.com/tosnetwork/tosutils-go/tvm/tuple"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 func makeConfigRootRefDict(t *testing.T, entries map[uint32]*cell.Cell) *cell.Cell {

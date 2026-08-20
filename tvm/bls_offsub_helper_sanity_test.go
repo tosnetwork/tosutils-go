@@ -3,7 +3,7 @@ package tvm
 import (
 	"testing"
 
-	circlbls "github.com/xssnick/tonutils-go/tvm/internal/bls12381"
+	circlbls "github.com/tosnetwork/tosutils-go/tvm/internal/bls12381"
 )
 
 func TestBLSOffSubgroupHelpersSanity(t *testing.T) {

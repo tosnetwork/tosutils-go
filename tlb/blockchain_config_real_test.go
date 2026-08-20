@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 //go:embed testdata/blockchain_config_mainnet.boc

@@ -2,12 +2,12 @@ package main
 
 import (
 	"context"
-	"github.com/xssnick/tonutils-go/address"
-	"github.com/xssnick/tonutils-go/liteclient"
-	"github.com/xssnick/tonutils-go/tlb"
-	"github.com/xssnick/tonutils-go/ton"
-	"github.com/xssnick/tonutils-go/ton/jetton"
-	"github.com/xssnick/tonutils-go/ton/nft"
+	"github.com/tosnetwork/tosutils-go/address"
+	"github.com/tosnetwork/tosutils-go/liteclient"
+	"github.com/tosnetwork/tosutils-go/tlb"
+	"github.com/tosnetwork/tosutils-go/ton"
+	"github.com/tosnetwork/tosutils-go/ton/jetton"
+	"github.com/tosnetwork/tosutils-go/ton/nft"
 	"log"
 	"strconv"
 	"time"

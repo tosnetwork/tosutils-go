@@ -3,7 +3,7 @@ package dht
 import (
 	"fmt"
 
-	"github.com/xssnick/tonutils-go/adnl/address"
+	"github.com/tosnetwork/tosutils-go/adnl/address"
 )
 
 func firstDialAddress(addrs []address.Address) (address.Address, string, error) {

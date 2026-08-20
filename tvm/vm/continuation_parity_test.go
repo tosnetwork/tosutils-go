@@ -3,8 +3,8 @@ package vm
 import (
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	"github.com/xssnick/tonutils-go/tvm/tuple"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/tuple"
 )
 
 func TestRegisterDefineRejectsNullC7Tuple(t *testing.T) {

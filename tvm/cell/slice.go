@@ -8,7 +8,7 @@ import (
 	"math/big"
 	"math/bits"
 
-	"github.com/xssnick/tonutils-go/address"
+	"github.com/tosnetwork/tosutils-go/address"
 )
 
 type Slice struct {

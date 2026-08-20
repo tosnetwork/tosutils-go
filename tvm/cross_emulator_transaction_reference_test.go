@@ -5,7 +5,7 @@ package tvm
 import (
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tlb"
+	"github.com/tosnetwork/tosutils-go/tlb"
 )
 
 func TestReferenceTransactionConfigRootCapabilities(t *testing.T) {

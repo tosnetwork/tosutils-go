@@ -9,12 +9,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xssnick/tonutils-go/address"
+	"github.com/tosnetwork/tosutils-go/address"
 
-	"github.com/xssnick/tonutils-go/liteclient"
-	"github.com/xssnick/tonutils-go/tlb"
-	"github.com/xssnick/tonutils-go/ton"
-	"github.com/xssnick/tonutils-go/ton/wallet"
+	"github.com/tosnetwork/tosutils-go/liteclient"
+	"github.com/tosnetwork/tosutils-go/tlb"
+	"github.com/tosnetwork/tosutils-go/ton"
+	"github.com/tosnetwork/tosutils-go/ton/wallet"
 )
 
 var api = func() ton.APIClientWrapped {

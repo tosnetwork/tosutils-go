@@ -4,9 +4,9 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/op/helpers"
-	"github.com/xssnick/tonutils-go/tvm/vm"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/op/helpers"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func TestAddrShiftCodeModErrorAndBoundaryEdges(t *testing.T) {

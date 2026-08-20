@@ -5,10 +5,10 @@ import (
 	"math/big"
 	"testing"
 
-	circlbls "github.com/xssnick/tonutils-go/tvm/internal/bls12381"
+	circlbls "github.com/tosnetwork/tosutils-go/tvm/internal/bls12381"
 	circlgroup "github.com/cloudflare/circl/group"
-	funcsop "github.com/xssnick/tonutils-go/tvm/op/funcs"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	funcsop "github.com/tosnetwork/tosutils-go/tvm/op/funcs"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func TestTonOpsCryptoCirclRistretto(t *testing.T) {

@@ -7,8 +7,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	"github.com/xssnick/tonutils-go/tvm/tuple"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/tuple"
 )
 
 func TestTonopsMoreEdges(t *testing.T) {

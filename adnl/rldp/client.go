@@ -7,7 +7,7 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"github.com/xssnick/tonutils-go/adnl/rldp/roundrobin"
+	"github.com/tosnetwork/tosutils-go/adnl/rldp/roundrobin"
 	"math"
 	"reflect"
 	"sort"
@@ -16,8 +16,8 @@ import (
 	"time"
 
 	"github.com/xssnick/raptorq"
-	"github.com/xssnick/tonutils-go/adnl"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/adnl"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 type ADNL interface {

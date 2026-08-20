@@ -3,7 +3,7 @@ package tvm
 import (
 	"testing"
 
-	vmcore "github.com/xssnick/tonutils-go/tvm/vm"
+	vmcore "github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 func tvmFuzzGlobalVersionCount() int {

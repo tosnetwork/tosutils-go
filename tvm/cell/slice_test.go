@@ -6,7 +6,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/address"
+	"github.com/tosnetwork/tosutils-go/address"
 )
 
 func TestLoadCell_LoadAddr(t *testing.T) {

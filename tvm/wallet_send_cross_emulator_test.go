@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 func TestTVMCrossEmulatorWalletV5SendExternal(t *testing.T) {

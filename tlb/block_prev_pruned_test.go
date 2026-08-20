@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 // TestBlkPrevInfoPrunedIsExplicit verifies that parsing a block header whose

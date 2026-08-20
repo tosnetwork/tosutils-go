@@ -19,29 +19,29 @@ All main TON protocols are implemented: ADNL, DHT, RLDP, Overlays, etc.
 If you love this library and want to support its development you can donate any amount of coins to this ton address ☺️
 `EQBx6tZZWa2Tbv6BvgcvegoOQxkRrVaBVwBOoW85nbP37_Go`
 
-You can find many usage examples in **[example](https://github.com/xssnick/tonutils-go/tree/master/example)** directory
+You can find many usage examples in **[example](https://github.com/tosnetwork/tosutils-go/tree/master/example)** directory
 
 ### How to use
 - [Connection](#Connection)
 - [Wallet](#Wallet)
-  - [Example](https://github.com/xssnick/tonutils-go/blob/master/example/wallet/main.go)
+  - [Example](https://github.com/tosnetwork/tosutils-go/blob/master/example/wallet/main.go)
   - [Create](#Wallet)
   - [Transfer](#Wallet)
   - [Balance](#Wallet)
-  - [Transfer to many](https://github.com/xssnick/tonutils-go/blob/master/example/highload-wallet/main.go)
-  - [Send message to contract](https://github.com/xssnick/tonutils-go/blob/master/example/send-to-contract/main.go)
-  - [Build transaction and send from other place](https://github.com/xssnick/tonutils-go/blob/master/example/wallet-cold-alike/main.go#L61)
+  - [Transfer to many](https://github.com/tosnetwork/tosutils-go/blob/master/example/highload-wallet/main.go)
+  - [Send message to contract](https://github.com/tosnetwork/tosutils-go/blob/master/example/send-to-contract/main.go)
+  - [Build transaction and send from other place](https://github.com/tosnetwork/tosutils-go/blob/master/example/wallet-cold-alike/main.go#L61)
 - [Accounts](#Account-info-and-transactions)
   - [List transactions](#Account-info-and-transactions)
-  - [Get balance](https://github.com/xssnick/tonutils-go/blob/master/example/account-state/main.go)
-  - [Subscribe on transactions](https://github.com/xssnick/tonutils-go/blob/master/example/accept-payments/main.go)
+  - [Get balance](https://github.com/tosnetwork/tosutils-go/blob/master/example/account-state/main.go)
+  - [Subscribe on transactions](https://github.com/tosnetwork/tosutils-go/blob/master/example/accept-payments/main.go)
 - [NFT](#NFT)
   - [Details](#NFT)
-  - [Mint](https://github.com/xssnick/tonutils-go/blob/master/example/nft-mint/main.go#L42)
-  - [Transfer](https://github.com/xssnick/tonutils-go/blob/master/ton/nft/integration_test.go#L89)
+  - [Mint](https://github.com/tosnetwork/tosutils-go/blob/master/example/nft-mint/main.go#L42)
+  - [Transfer](https://github.com/tosnetwork/tosutils-go/blob/master/ton/nft/integration_test.go#L89)
 - [Jettons](#Jettons)
   - [Details](#Jettons)
-  - [Transfer](https://github.com/xssnick/tonutils-go/blob/master/example/jetton-transfer/main.go)
+  - [Transfer](https://github.com/tosnetwork/tosutils-go/blob/master/example/jetton-transfer/main.go)
 - [DNS](#DNS)
   - [Resolve](#DNS)
   - [Get records](#Records)
@@ -58,8 +58,8 @@ You can find many usage examples in **[example](https://github.com/xssnick/tonut
   - [BoC](#BoC)
   - [Proof creation](#Proofs)
   - [MerkleProofBuilder](#MerkleProofBuilder)
-- [Network](https://github.com/xssnick/tonutils-go/tree/master/adnl)
-  - [ADNL UDP](https://github.com/xssnick/tonutils-go/blob/master/adnl/adnl_test.go)
+- [Network](https://github.com/tosnetwork/tosutils-go/tree/master/adnl)
+  - [ADNL UDP](https://github.com/tosnetwork/tosutils-go/blob/master/adnl/adnl_test.go)
 - [Custom reconnect policy](#Custom-reconnect-policy)
 - [Features to implement](#Features-to-implement)
 
@@ -200,7 +200,7 @@ You can find full working example at `example/external-message/main.go`
 Contracts can be deployed using wallet's method `DeployContract`, 
 you should pass 3 cells there: contract code, contract initial data, message body.
 
-You can find example [here](https://github.com/xssnick/tonutils-go/blob/master/example/deploy-nft-collection/main.go)
+You can find example [here](https://github.com/tosnetwork/tosutils-go/blob/master/example/deploy-nft-collection/main.go)
 
 ### Account info and transactions
 You can get full account information including balance, stored data and even code using GetAccount method. 
@@ -398,7 +398,7 @@ if err = tlb.Parse(&decoded, payloadCell); err != nil {
 fmt.Println(decoded.QueryID) // 123
 ```
 
-See also [build NFT mint message](https://github.com/xssnick/tonutils-go/blob/master/ton/nft/collection.go#L189) for a real-world serializer example.
+See also [build NFT mint message](https://github.com/tosnetwork/tosutils-go/blob/master/ton/nft/collection.go#L189) for a real-world serializer example.
 
 ### NFT
 You can mint, transfer, and get NFT information using `nft.ItemClient` and `nft.CollectionClient`, like that:
@@ -644,7 +644,7 @@ Sometimes it is needed to import or export cell, for example to transfer over th
 
 You can simply export cell using `ToBOC()` method of cell, and import it using `cell.FromBOC(bytes)`.
 
-[Example of use can be found in tests](https://github.com/xssnick/tonutils-go/blob/master/tvm/cell/cell_test.go#L76) or in [transfer-url-for-qr](https://github.com/xssnick/tonutils-go/blob/master/example/transfer-url-for-qr/main.go) example
+[Example of use can be found in tests](https://github.com/tosnetwork/tosutils-go/blob/master/tvm/cell/cell_test.go#L76) or in [transfer-url-for-qr](https://github.com/tosnetwork/tosutils-go/blob/master/example/transfer-url-for-qr/main.go) example
 
 ##### Proofs
 

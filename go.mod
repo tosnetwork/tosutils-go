@@ -1,4 +1,4 @@
-module github.com/xssnick/tonutils-go
+module github.com/tosnetwork/tosutils-go
 
 go 1.26.0
 

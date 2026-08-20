@@ -5,9 +5,9 @@ import (
 	"math/big"
 	"testing"
 
-	circlbls "github.com/xssnick/tonutils-go/tvm/internal/bls12381"
+	circlbls "github.com/tosnetwork/tosutils-go/tvm/internal/bls12381"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 func TestCryptoWrapperAdditionalPaths(t *testing.T) {

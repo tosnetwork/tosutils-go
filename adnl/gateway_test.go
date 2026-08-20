@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xssnick/tonutils-go/adnl/keys"
+	"github.com/tosnetwork/tosutils-go/adnl/keys"
 )
 
 func TestGatewayLimitsPendingPeersLRU(t *testing.T) {

@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	opcellslice "github.com/xssnick/tonutils-go/tvm/op/cellslice"
-	opmath "github.com/xssnick/tonutils-go/tvm/op/math"
-	opstack "github.com/xssnick/tonutils-go/tvm/op/stack"
-	"github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	opcellslice "github.com/tosnetwork/tosutils-go/tvm/op/cellslice"
+	opmath "github.com/tosnetwork/tosutils-go/tvm/op/math"
+	opstack "github.com/tosnetwork/tosutils-go/tvm/op/stack"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 func TestTVMStepUsesBitTrieForNonByteAlignedOpcode(t *testing.T) {

@@ -4,9 +4,9 @@ import (
 	"math/big"
 	"testing"
 
-	execop "github.com/xssnick/tonutils-go/tvm/op/exec"
-	stackop "github.com/xssnick/tonutils-go/tvm/op/stack"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	execop "github.com/tosnetwork/tosutils-go/tvm/op/exec"
+	stackop "github.com/tosnetwork/tosutils-go/tvm/op/stack"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func TestContOpsGoSemantics(t *testing.T) {

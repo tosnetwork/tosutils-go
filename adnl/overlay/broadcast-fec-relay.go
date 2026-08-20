@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 const broadcastFECDateSkew = 20 * time.Second

@@ -1,8 +1,8 @@
 package node
 
 import (
-	"github.com/xssnick/tonutils-go/tl"
-	"github.com/xssnick/tonutils-go/ton"
+	"github.com/tosnetwork/tosutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/ton"
 )
 
 func init() {

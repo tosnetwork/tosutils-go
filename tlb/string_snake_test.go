@@ -4,7 +4,7 @@ package tlb
 import (
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 func TestStringSnake_LoadFromCell(t *testing.T) {

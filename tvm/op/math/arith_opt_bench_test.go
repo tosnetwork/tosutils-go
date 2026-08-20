@@ -3,7 +3,7 @@ package math
 import (
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 var benchmarkMathStackLenSink int

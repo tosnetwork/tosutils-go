@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xssnick/tonutils-go/adnl"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/adnl"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 func TestStatsTracksVersionFeedbackAndClose(t *testing.T) {

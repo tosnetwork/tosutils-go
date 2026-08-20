@@ -5,9 +5,9 @@ import (
 	"math/big"
 	"testing"
 
-	tuplepkg "github.com/xssnick/tonutils-go/tvm/tuple"
-	"github.com/xssnick/tonutils-go/tvm/vm"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	tuplepkg "github.com/tosnetwork/tosutils-go/tvm/tuple"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func assertTupleVMError(t *testing.T, err error, code int64) {

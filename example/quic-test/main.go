@@ -18,9 +18,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/xssnick/tonutils-go/adnl/keys"
-	"github.com/xssnick/tonutils-go/adnl/quic"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/adnl/keys"
+	"github.com/tosnetwork/tosutils-go/adnl/quic"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 const (

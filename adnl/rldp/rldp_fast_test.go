@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xssnick/tonutils-go/adnl"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/adnl"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 func testTransferID(value string) (id [32]byte) {

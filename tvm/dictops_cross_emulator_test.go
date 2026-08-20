@@ -9,11 +9,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	dictop "github.com/xssnick/tonutils-go/tvm/op/dict"
-	"github.com/xssnick/tonutils-go/tvm/tuple"
-	"github.com/xssnick/tonutils-go/tvm/vm"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	dictop "github.com/tosnetwork/tosutils-go/tvm/op/dict"
+	"github.com/tosnetwork/tosutils-go/tvm/tuple"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 const dictOpsParityCaseCount = 19

@@ -3,7 +3,7 @@ package tvm
 import (
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 func markRegistered(node *trieNode, want map[string]bool) {

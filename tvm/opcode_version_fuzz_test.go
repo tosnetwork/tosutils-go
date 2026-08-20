@@ -5,12 +5,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	mathop "github.com/xssnick/tonutils-go/tvm/op/math"
-	stackop "github.com/xssnick/tonutils-go/tvm/op/stack"
-	"github.com/xssnick/tonutils-go/tvm/tuple"
-	vmcore "github.com/xssnick/tonutils-go/tvm/vm"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	mathop "github.com/tosnetwork/tosutils-go/tvm/op/math"
+	stackop "github.com/tosnetwork/tosutils-go/tvm/op/stack"
+	"github.com/tosnetwork/tosutils-go/tvm/tuple"
+	vmcore "github.com/tosnetwork/tosutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 const (

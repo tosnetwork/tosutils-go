@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/xssnick/tonutils-go/address"
-	"github.com/xssnick/tonutils-go/liteclient"
-	"github.com/xssnick/tonutils-go/ton"
+	"github.com/tosnetwork/tosutils-go/address"
+	"github.com/tosnetwork/tosutils-go/liteclient"
+	"github.com/tosnetwork/tosutils-go/ton"
 )
 
 func main() {

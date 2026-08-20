@@ -4,8 +4,8 @@ import (
 	"net"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/adnl/address"
-	"github.com/xssnick/tonutils-go/liteclient"
+	"github.com/tosnetwork/tosutils-go/adnl/address"
+	"github.com/tosnetwork/tosutils-go/liteclient"
 )
 
 func TestFirstDialAddressIPv6(t *testing.T) {

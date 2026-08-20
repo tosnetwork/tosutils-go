@@ -7,8 +7,8 @@ import (
 	"math"
 	"reflect"
 
-	"github.com/xssnick/tonutils-go/adnl/keys"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/adnl/keys"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 func calcBroadcastTwoStepID(source any, flags int32, date uint32, sourceADNL, dataHash []byte, dataSize, partSize uint32, extra []byte) ([]byte, error) {

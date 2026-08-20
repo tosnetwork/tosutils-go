@@ -5,7 +5,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func TestExecSubdictKeepsPrefixWhenRequested(t *testing.T) {

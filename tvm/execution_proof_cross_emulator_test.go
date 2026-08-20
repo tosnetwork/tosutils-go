@@ -8,14 +8,14 @@ import (
 	"os"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	cellsliceop "github.com/xssnick/tonutils-go/tvm/op/cellslice"
-	execop "github.com/xssnick/tonutils-go/tvm/op/exec"
-	funcsop "github.com/xssnick/tonutils-go/tvm/op/funcs"
-	stackop "github.com/xssnick/tonutils-go/tvm/op/stack"
-	"github.com/xssnick/tonutils-go/tvm/tuple"
-	"github.com/xssnick/tonutils-go/tvm/vm"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	cellsliceop "github.com/tosnetwork/tosutils-go/tvm/op/cellslice"
+	execop "github.com/tosnetwork/tosutils-go/tvm/op/exec"
+	funcsop "github.com/tosnetwork/tosutils-go/tvm/op/funcs"
+	stackop "github.com/tosnetwork/tosutils-go/tvm/op/stack"
+	"github.com/tosnetwork/tosutils-go/tvm/tuple"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func TestExecutionProofCrossEmulatorGasAndStackParity(t *testing.T) {

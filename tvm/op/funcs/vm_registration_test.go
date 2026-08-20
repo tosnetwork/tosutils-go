@@ -3,9 +3,9 @@ package funcs_test
 import (
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm"
-	funcs "github.com/xssnick/tonutils-go/tvm/op/funcs"
-	"github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm"
+	funcs "github.com/tosnetwork/tosutils-go/tvm/op/funcs"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 func TestVMBuildsRegisteredFuncsOps(t *testing.T) {

@@ -1,6 +1,6 @@
 package node
 
-import "github.com/xssnick/tonutils-go/tl"
+import "github.com/tosnetwork/tosutils-go/tl"
 
 func init() {
 	tl.Register(SessionID{}, "tonNode.sessionId workchain:int shard:long cc_seqno:int opts_hash:int256 = tonNode.SessionId")

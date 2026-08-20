@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/adnl"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/adnl"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 func TestRawADNLMessageQueryID(t *testing.T) {

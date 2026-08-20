@@ -6,7 +6,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 func assertCrossSkippedGoStack(t *testing.T, got *cell.Cell, want []any) {

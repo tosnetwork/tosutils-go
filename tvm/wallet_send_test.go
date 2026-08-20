@@ -8,11 +8,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/address"
-	"github.com/xssnick/tonutils-go/tlb"
-	walletpkg "github.com/xssnick/tonutils-go/ton/wallet"
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	vmcore "github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/address"
+	"github.com/tosnetwork/tosutils-go/tlb"
+	walletpkg "github.com/tosnetwork/tosutils-go/ton/wallet"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	vmcore "github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 const (

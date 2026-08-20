@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xssnick/tonutils-go/liteclient"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/liteclient"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 type retryClient struct {

@@ -8,13 +8,13 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	cellsliceop "github.com/xssnick/tonutils-go/tvm/op/cellslice"
-	dictop "github.com/xssnick/tonutils-go/tvm/op/dict"
-	execop "github.com/xssnick/tonutils-go/tvm/op/exec"
-	funcsop "github.com/xssnick/tonutils-go/tvm/op/funcs"
-	stackop "github.com/xssnick/tonutils-go/tvm/op/stack"
-	"github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	cellsliceop "github.com/tosnetwork/tosutils-go/tvm/op/cellslice"
+	dictop "github.com/tosnetwork/tosutils-go/tvm/op/dict"
+	execop "github.com/tosnetwork/tosutils-go/tvm/op/exec"
+	funcsop "github.com/tosnetwork/tosutils-go/tvm/op/funcs"
+	stackop "github.com/tosnetwork/tosutils-go/tvm/op/stack"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 const registeredOpcodeAvailabilityAuditGasLimit = 1_000

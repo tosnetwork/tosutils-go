@@ -17,7 +17,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 // ImportFees is the import_fees$_ TLB type (crypto/block/block.tlb:186-187):

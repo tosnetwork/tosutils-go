@@ -1,6 +1,6 @@
 package math
 
-import "github.com/xssnick/tonutils-go/tvm/cell"
+import "github.com/tosnetwork/tosutils-go/tvm/cell"
 
 func newBytePlusOneImmediate(value int8) (get func() int, serialize func() *cell.Builder, deserialize func(*cell.Slice) error) {
 	decoded := int(value)

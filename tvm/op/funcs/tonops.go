@@ -11,11 +11,11 @@ import (
 
 	"filippo.io/edwards25519"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	localec "github.com/xssnick/tonutils-go/tvm/internal/secp256k1"
-	"github.com/xssnick/tonutils-go/tvm/op/helpers"
-	"github.com/xssnick/tonutils-go/tvm/vm"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	localec "github.com/tosnetwork/tosutils-go/tvm/internal/secp256k1"
+	"github.com/tosnetwork/tosutils-go/tvm/op/helpers"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func init() {

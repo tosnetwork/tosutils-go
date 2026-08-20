@@ -8,11 +8,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tlb"
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	funcsop "github.com/xssnick/tonutils-go/tvm/op/funcs"
-	"github.com/xssnick/tonutils-go/tvm/tuple"
-	"github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tlb"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	funcsop "github.com/tosnetwork/tosutils-go/tvm/op/funcs"
+	"github.com/tosnetwork/tosutils-go/tvm/tuple"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 func TestTVMCrossEmulatorTonOpsEmulatorC7Path(t *testing.T) {

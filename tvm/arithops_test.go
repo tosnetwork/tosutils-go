@@ -4,9 +4,9 @@ import (
 	"math/big"
 	"testing"
 
-	mathop "github.com/xssnick/tonutils-go/tvm/op/math"
-	"github.com/xssnick/tonutils-go/tvm/vm"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	mathop "github.com/tosnetwork/tosutils-go/tvm/op/math"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func TestArithOpsGoSemantics(t *testing.T) {

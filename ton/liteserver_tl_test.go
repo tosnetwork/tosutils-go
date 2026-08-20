@@ -5,8 +5,8 @@ import (
 	"encoding/binary"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tl"
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 func testBlockIDExt(seqno uint32) *BlockIDExt {

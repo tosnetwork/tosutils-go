@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tlb"
+	"github.com/tosnetwork/tosutils-go/tlb"
 )
 
 // TestGetParentBlocksRefusesPrunedPrev ensures parent extraction fails loudly

@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	execop "github.com/xssnick/tonutils-go/tvm/op/exec"
-	stackop "github.com/xssnick/tonutils-go/tvm/op/stack"
-	"github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	execop "github.com/tosnetwork/tosutils-go/tvm/op/exec"
+	stackop "github.com/tosnetwork/tosutils-go/tvm/op/stack"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 func TestTVMCrossEmulatorStackDepthBoundary64K(t *testing.T) {

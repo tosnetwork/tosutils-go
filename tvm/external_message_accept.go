@@ -4,8 +4,8 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/xssnick/tonutils-go/tlb"
-	"github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tlb"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 // CheckExternalMessageAccepted runs only the transaction compute path needed to

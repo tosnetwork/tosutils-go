@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 func TestGetAllNonfinalValidatorGroups(t *testing.T) {

@@ -6,14 +6,14 @@ import (
 	"crypto/ed25519"
 	"encoding/hex"
 	"fmt"
-	"github.com/xssnick/tonutils-go/adnl/keys"
+	"github.com/tosnetwork/tosutils-go/adnl/keys"
 	"math/bits"
 	"sync"
 	"sync/atomic"
 	"time"
 
-	"github.com/xssnick/tonutils-go/adnl/overlay"
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/adnl/overlay"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 const _MaxFailCount = 3

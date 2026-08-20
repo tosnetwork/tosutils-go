@@ -6,15 +6,15 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	cellsliceop "github.com/xssnick/tonutils-go/tvm/op/cellslice"
-	execop "github.com/xssnick/tonutils-go/tvm/op/exec"
-	funcsop "github.com/xssnick/tonutils-go/tvm/op/funcs"
-	mathop "github.com/xssnick/tonutils-go/tvm/op/math"
-	stackop "github.com/xssnick/tonutils-go/tvm/op/stack"
-	"github.com/xssnick/tonutils-go/tvm/tuple"
-	vmcore "github.com/xssnick/tonutils-go/tvm/vm"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	cellsliceop "github.com/tosnetwork/tosutils-go/tvm/op/cellslice"
+	execop "github.com/tosnetwork/tosutils-go/tvm/op/exec"
+	funcsop "github.com/tosnetwork/tosutils-go/tvm/op/funcs"
+	mathop "github.com/tosnetwork/tosutils-go/tvm/op/math"
+	stackop "github.com/tosnetwork/tosutils-go/tvm/op/stack"
+	"github.com/tosnetwork/tosutils-go/tvm/tuple"
+	vmcore "github.com/tosnetwork/tosutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func popInt64(t *testing.T, stack *vmcore.Stack) int64 {

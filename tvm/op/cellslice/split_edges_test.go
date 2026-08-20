@@ -3,8 +3,8 @@ package cellslice
 import (
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func TestSplitStackTypeRangeAndQuietEdges(t *testing.T) {

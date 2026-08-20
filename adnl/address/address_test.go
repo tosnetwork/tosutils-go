@@ -4,7 +4,7 @@ import (
 	"net"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 func TestListRoundtripMixedUDPAndUDP6(t *testing.T) {

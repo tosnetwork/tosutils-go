@@ -2,7 +2,7 @@ package vm
 
 import (
 	"fmt"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 const (

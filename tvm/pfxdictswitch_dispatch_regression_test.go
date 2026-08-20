@@ -3,7 +3,7 @@ package tvm
 import (
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 func pfxDictSwitchZeroRootFlagCode(bits uint64) *cell.Cell {

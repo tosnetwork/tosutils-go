@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/adnl/keys"
-	"github.com/xssnick/tonutils-go/tl"
-	"github.com/xssnick/tonutils-go/tlb"
+	"github.com/tosnetwork/tosutils-go/adnl/keys"
+	"github.com/tosnetwork/tosutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/tlb"
 )
 
 func makeSimplexValidator(t *testing.T, seedByte byte, weight uint64) (*tlb.ValidatorAddr, ed25519.PrivateKey, []byte) {

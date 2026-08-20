@@ -6,7 +6,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 type arrayElementBoxKey struct {

@@ -3,8 +3,8 @@ package math
 import (
 	"math/big"
 
-	"github.com/xssnick/tonutils-go/tvm/vm"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 const bitSizeInvalid = 0x7fffffff

@@ -3,7 +3,7 @@ package tvm
 import (
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 func mustUsageProofWithLoadedRoot(t *testing.T, root *cell.Cell) *cell.Cell {

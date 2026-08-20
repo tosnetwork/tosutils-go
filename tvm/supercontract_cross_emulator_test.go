@@ -12,16 +12,16 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tlb"
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	localec "github.com/xssnick/tonutils-go/tvm/internal/secp256k1"
-	cellsliceop "github.com/xssnick/tonutils-go/tvm/op/cellslice"
-	funcsop "github.com/xssnick/tonutils-go/tvm/op/funcs"
-	mathop "github.com/xssnick/tonutils-go/tvm/op/math"
-	stackop "github.com/xssnick/tonutils-go/tvm/op/stack"
-	tupleop "github.com/xssnick/tonutils-go/tvm/op/tuple"
-	"github.com/xssnick/tonutils-go/tvm/tuple"
-	"github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tlb"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	localec "github.com/tosnetwork/tosutils-go/tvm/internal/secp256k1"
+	cellsliceop "github.com/tosnetwork/tosutils-go/tvm/op/cellslice"
+	funcsop "github.com/tosnetwork/tosutils-go/tvm/op/funcs"
+	mathop "github.com/tosnetwork/tosutils-go/tvm/op/math"
+	stackop "github.com/tosnetwork/tosutils-go/tvm/op/stack"
+	tupleop "github.com/tosnetwork/tosutils-go/tvm/op/tuple"
+	"github.com/tosnetwork/tosutils-go/tvm/tuple"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 type superContractStep struct {

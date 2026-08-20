@@ -4,8 +4,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tlb"
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tlb"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 func TestTransactionBounceMessageUsageCountsBodyRefsOnly(t *testing.T) {

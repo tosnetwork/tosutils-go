@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/vm"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func TestCompoundDivModPopOrderEdges(t *testing.T) {

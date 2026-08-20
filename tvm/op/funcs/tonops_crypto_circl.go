@@ -7,11 +7,11 @@ import (
 
 	ristretto "github.com/bwesterb/go-ristretto"
 	circlgroup "github.com/cloudflare/circl/group"
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	circlbls "github.com/xssnick/tonutils-go/tvm/internal/bls12381"
-	"github.com/xssnick/tonutils-go/tvm/op/helpers"
-	"github.com/xssnick/tonutils-go/tvm/vm"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	circlbls "github.com/tosnetwork/tosutils-go/tvm/internal/bls12381"
+	"github.com/tosnetwork/tosutils-go/tvm/op/helpers"
+	"github.com/tosnetwork/tosutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 const tonBLSSignatureDST = "BLS_SIG_BLS12381G2_XMD:SHA-256_SSWU_RO_POP_"

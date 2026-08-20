@@ -8,15 +8,15 @@ import (
 	"os"
 	"testing"
 
-	cellsliceop "github.com/xssnick/tonutils-go/tvm/op/cellslice"
-	funcsop "github.com/xssnick/tonutils-go/tvm/op/funcs"
-	mathop "github.com/xssnick/tonutils-go/tvm/op/math"
-	stackop "github.com/xssnick/tonutils-go/tvm/op/stack"
+	cellsliceop "github.com/tosnetwork/tosutils-go/tvm/op/cellslice"
+	funcsop "github.com/tosnetwork/tosutils-go/tvm/op/funcs"
+	mathop "github.com/tosnetwork/tosutils-go/tvm/op/math"
+	stackop "github.com/tosnetwork/tosutils-go/tvm/op/stack"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	"github.com/xssnick/tonutils-go/tvm/tuple"
-	vmcore "github.com/xssnick/tonutils-go/tvm/vm"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/tuple"
+	vmcore "github.com/tosnetwork/tosutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func TestTVMCrossEmulatorAllGlobalVersionsSmoke(t *testing.T) {

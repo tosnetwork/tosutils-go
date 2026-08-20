@@ -5,7 +5,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 func ccFromNano(nano int64, extra *cell.Dictionary) CurrencyCollection {

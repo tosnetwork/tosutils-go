@@ -5,12 +5,12 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tlb"
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	execop "github.com/xssnick/tonutils-go/tvm/op/exec"
-	funcsop "github.com/xssnick/tonutils-go/tvm/op/funcs"
-	stackop "github.com/xssnick/tonutils-go/tvm/op/stack"
-	vmcore "github.com/xssnick/tonutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tlb"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	execop "github.com/tosnetwork/tosutils-go/tvm/op/exec"
+	funcsop "github.com/tosnetwork/tosutils-go/tvm/op/funcs"
+	stackop "github.com/tosnetwork/tosutils-go/tvm/op/stack"
+	vmcore "github.com/tosnetwork/tosutils-go/tvm/vm"
 )
 
 const internalMessageTestAmount = uint64(777)

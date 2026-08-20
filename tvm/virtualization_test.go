@@ -4,11 +4,11 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tvm/cell"
-	cellsliceop "github.com/xssnick/tonutils-go/tvm/op/cellslice"
-	"github.com/xssnick/tonutils-go/tvm/tuple"
-	vmcore "github.com/xssnick/tonutils-go/tvm/vm"
-	"github.com/xssnick/tonutils-go/tvm/vmerr"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
+	cellsliceop "github.com/tosnetwork/tosutils-go/tvm/op/cellslice"
+	"github.com/tosnetwork/tosutils-go/tvm/tuple"
+	vmcore "github.com/tosnetwork/tosutils-go/tvm/vm"
+	"github.com/tosnetwork/tosutils-go/tvm/vmerr"
 )
 
 func mustVirtualizedPrunedCellForTVM(t *testing.T) (*cell.Cell, *cell.Cell) {

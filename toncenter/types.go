@@ -2,7 +2,7 @@ package toncenter
 
 import (
 	"encoding/json"
-	"github.com/xssnick/tonutils-go/tlb"
+	"github.com/tosnetwork/tosutils-go/tlb"
 	"math/big"
 )
 

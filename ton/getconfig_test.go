@@ -5,8 +5,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tl"
-	"github.com/xssnick/tonutils-go/tvm/cell"
+	"github.com/tosnetwork/tosutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/tvm/cell"
 )
 
 func TestUnwrapLibraryResultCell(t *testing.T) {

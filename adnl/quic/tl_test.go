@@ -10,7 +10,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/tl"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
 
 func TestConstructorIDs(t *testing.T) {

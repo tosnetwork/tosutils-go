@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/xssnick/tonutils-go/adnl/address"
+	"github.com/tosnetwork/tosutils-go/adnl/address"
 )
 
 func TestGetConfigFromUrl(t *testing.T) {
