@@ -3,23 +3,56 @@ package dht
 import (
 	"bytes"
 	"context"
+	"crypto"
 	"crypto/ed25519"
 	"encoding/base64"
 	"encoding/hex"
+	"errors"
 	"fmt"
-	"github.com/tosnetwork/tosutils-go/adnl"
-	"github.com/tosnetwork/tosutils-go/adnl/address"
-	"github.com/tosnetwork/tosutils-go/adnl/keys"
-	"github.com/tosnetwork/tosutils-go/adnl/overlay"
-	"github.com/tosnetwork/tosutils-go/liteclient"
-	"github.com/tosnetwork/tosutils-go/tl"
+	"io"
 	"net"
 	"reflect"
 	"strings"
 	"sync/atomic"
 	"testing"
 	"time"
+
+	"github.com/tosnetwork/tosutils-go/adnl"
+	"github.com/tosnetwork/tosutils-go/adnl/address"
+	"github.com/tosnetwork/tosutils-go/adnl/keys"
+	"github.com/tosnetwork/tosutils-go/adnl/overlay"
+	"github.com/tosnetwork/tosutils-go/liteclient"
+	"github.com/tosnetwork/tosutils-go/tl"
 )
+
+type dhtTestSigner struct {
+	private ed25519.PrivateKey
+	public  crypto.PublicKey
+	err     error
+	corrupt bool
+	calls   int
+	hashes  []crypto.Hash
+}
+
+func (s *dhtTestSigner) Public() crypto.PublicKey {
+	if s.public != nil {
+		return s.public
+	}
+	return s.private.Public()
+}
+
+func (s *dhtTestSigner) Sign(_ io.Reader, message []byte, opts crypto.SignerOpts) ([]byte, error) {
+	s.calls++
+	s.hashes = append(s.hashes, opts.HashFunc())
+	if s.err != nil {
+		return nil, s.err
+	}
+	signature := ed25519.Sign(s.private, message)
+	if s.corrupt {
+		signature[0] ^= 0xff
+	}
+	return signature, nil
+}
 
 type MockGateway struct {
 	reg         func(addr string, key ed25519.PublicKey) (adnl.Peer, error)
@@ -61,6 +94,58 @@ func (m *MockGateway) RegisterClient(addr string, key ed25519.PublicKey) (adnl.P
 		return nil, fmt.Errorf("mock register client is not configured")
 	}
 	return m.reg(addr, key)
+}
+
+func TestBuildStoreValueWithSigner(t *testing.T) {
+	private := ed25519.NewKeyFromSeed(bytes.Repeat([]byte{0x42}, ed25519.SeedSize))
+	public := private.Public().(ed25519.PublicKey)
+	signer := &dhtTestSigner{private: private}
+
+	value, _, err := buildStoreValueWithSigner(
+		keys.PublicKeyED25519{Key: public},
+		[]byte("address"),
+		0,
+		[]byte("value"),
+		UpdateRuleSignature{},
+		time.Hour,
+		signer,
+	)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if signer.calls != 2 || len(signer.hashes) != 2 ||
+		signer.hashes[0] != crypto.Hash(0) || signer.hashes[1] != crypto.Hash(0) {
+		t.Fatalf("sign calls=%d hashes=%v", signer.calls, signer.hashes)
+	}
+	if len(value.KeyDescription.Signature) != ed25519.SignatureSize ||
+		len(value.Signature) != ed25519.SignatureSize {
+		t.Fatal("signature-update value was not fully signed")
+	}
+}
+
+func TestBuildStoreValueWithSignerFailsClosed(t *testing.T) {
+	private := ed25519.NewKeyFromSeed(bytes.Repeat([]byte{0x42}, ed25519.SeedSize))
+	public := private.Public().(ed25519.PublicKey)
+	owner := keys.PublicKeyED25519{Key: public}
+	wrongPrivate := ed25519.NewKeyFromSeed(bytes.Repeat([]byte{0x43}, ed25519.SeedSize))
+
+	tests := map[string]crypto.Signer{
+		"missing signer":     nil,
+		"non-ed25519 public": &dhtTestSigner{private: private, public: []byte("not-ed25519")},
+		"wrong ed25519 key":  &dhtTestSigner{private: wrongPrivate},
+		"signer failure":     &dhtTestSigner{private: private, err: errors.New("unavailable")},
+		"invalid signature":  &dhtTestSigner{private: private, corrupt: true},
+	}
+	for name, signer := range tests {
+		t.Run(name, func(t *testing.T) {
+			if _, _, err := buildStoreValueWithSigner(
+				owner, []byte("address"), 0, []byte("value"),
+				UpdateRuleSignature{}, time.Hour, signer,
+			); err == nil {
+				t.Fatal("invalid signer was accepted")
+			}
+		})
+	}
 }
 
 func TestNewClientFromConfigRejectsTooLargeKA(t *testing.T) {

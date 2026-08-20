@@ -2,11 +2,11 @@ package dht
 
 import (
 	"context"
+	"crypto"
 	"crypto/ed25519"
+	"crypto/rand"
 	"errors"
 	"fmt"
-	"github.com/tosnetwork/tosutils-go/adnl/keys"
-	"github.com/tosnetwork/tosutils-go/liteclient"
 	"sort"
 	"sync"
 	"sync/atomic"
@@ -14,7 +14,9 @@ import (
 
 	"github.com/tosnetwork/tosutils-go/adnl"
 	"github.com/tosnetwork/tosutils-go/adnl/address"
+	"github.com/tosnetwork/tosutils-go/adnl/keys"
 	"github.com/tosnetwork/tosutils-go/adnl/overlay"
+	"github.com/tosnetwork/tosutils-go/liteclient"
 	"github.com/tosnetwork/tosutils-go/tl"
 )
 
@@ -414,6 +416,27 @@ func (c *Client) Store(
 	}
 	storedCount, err = c.storePreparedValue(ctx, &val, keyId)
 	return storedCount, keyId, err
+}
+
+// StoreWithSigner stores a value while keeping signature-update private key
+// material behind a crypto.Signer. The signer must expose the Ed25519 public
+// key named by id; each returned signature is verified before network use.
+func (c *Client) StoreWithSigner(
+	ctx context.Context,
+	id any,
+	name []byte,
+	index int32,
+	value []byte,
+	rule any,
+	ttl time.Duration,
+	owner crypto.Signer,
+) (storedCount int, idKey []byte, err error) {
+	val, keyID, err := buildStoreValueWithSigner(id, name, index, value, rule, ttl, owner)
+	if err != nil {
+		return 0, nil, err
+	}
+	storedCount, err = c.storePreparedValue(ctx, &val, keyID)
+	return storedCount, keyID, err
 }
 
 func (c *Client) storePreparedValue(ctx context.Context, val *Value, keyId []byte) (storedCount int, err error) {
@@ -843,6 +866,22 @@ func buildStoreValue(
 	ttl time.Duration,
 	ownerKey ed25519.PrivateKey,
 ) (Value, []byte, error) {
+	if _, ok := rule.(UpdateRuleSignature); ok && len(ownerKey) != ed25519.PrivateKeySize {
+		return Value{}, nil, fmt.Errorf("invalid ed25519 private key")
+	}
+
+	return buildStoreValueWithSigner(id, name, index, value, rule, ttl, ownerKey)
+}
+
+func buildStoreValueWithSigner(
+	id any,
+	name []byte,
+	index int32,
+	value []byte,
+	rule any,
+	ttl time.Duration,
+	owner crypto.Signer,
+) (Value, []byte, error) {
 	if err := checkValuePublicKey(id); err != nil {
 		return Value{}, nil, err
 	}
@@ -871,14 +910,18 @@ func buildStoreValue(
 
 	switch rule.(type) {
 	case UpdateRuleSignature:
-		if len(ownerKey) != ed25519.PrivateKeySize {
-			return Value{}, nil, fmt.Errorf("invalid ed25519 private key")
+		if owner == nil {
+			return Value{}, nil, fmt.Errorf("no ed25519 signer")
 		}
-		val.KeyDescription.Signature, err = signTL(val.KeyDescription, ownerKey)
+		public, ok := owner.Public().(ed25519.PublicKey)
+		if !ok || len(public) != ed25519.PublicKeySize {
+			return Value{}, nil, fmt.Errorf("signer public key is not ed25519")
+		}
+		val.KeyDescription.Signature, err = signTLWithSigner(val.KeyDescription, owner, public)
 		if err != nil {
 			return Value{}, nil, fmt.Errorf("failed to sign key description: %w", err)
 		}
-		val.Signature, err = signTL(val, ownerKey)
+		val.Signature, err = signTLWithSigner(val, owner, public)
 		if err != nil {
 			return Value{}, nil, fmt.Errorf("failed to sign value: %w", err)
 		}
@@ -894,12 +937,19 @@ func buildStoreValue(
 	return val, keyId, nil
 }
 
-func signTL(obj tl.Serializable, key ed25519.PrivateKey) ([]byte, error) {
+func signTLWithSigner(obj tl.Serializable, signer crypto.Signer, public ed25519.PublicKey) ([]byte, error) {
 	data, err := tl.Serialize(obj, true)
 	if err != nil {
 		return nil, err
 	}
-	return ed25519.Sign(key, data), nil
+	signature, err := signer.Sign(rand.Reader, data, crypto.Hash(0))
+	if err != nil {
+		return nil, err
+	}
+	if len(signature) != ed25519.SignatureSize || !ed25519.Verify(public, data, signature) {
+		return nil, fmt.Errorf("signer returned an invalid ed25519 signature")
+	}
+	return signature, nil
 }
 
 type foundResult struct {
