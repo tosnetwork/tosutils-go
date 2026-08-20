@@ -949,7 +949,7 @@ func signTLWithSigner(obj tl.Serializable, signer crypto.Signer, public ed25519.
 	if len(signature) != ed25519.SignatureSize || !ed25519.Verify(public, data, signature) {
 		return nil, fmt.Errorf("signer returned an invalid ed25519 signature")
 	}
-	return signature, nil
+	return append([]byte(nil), signature...), nil
 }
 
 type foundResult struct {
